@@ -20,6 +20,8 @@ jobs:
       - name: update version
         run: |
           npm version prerelease --no-git-tag-version
+          git config --global user.name 'Andrii Oriekhov'
+          git config --global user.email 'andriyorehov@gmail.com'
           git add .
           git commit -m 'bump version'
           git push
